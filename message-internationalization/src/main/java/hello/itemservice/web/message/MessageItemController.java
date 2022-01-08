@@ -57,6 +57,5 @@ public class MessageItemController {
         itemRepository.update(itemId, item);
         return "redirect:/message/items/{itemId}";
     }
-
 }
 
