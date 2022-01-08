@@ -1,0 +1,11 @@
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+.gradle
+*.iml
+out
+thymeleaf-basic/build
+message-internationalization/build
+thymeleaf-spring-integration/build
