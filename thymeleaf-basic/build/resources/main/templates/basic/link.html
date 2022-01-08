@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>URL 링크</h1>
+<ul>
+    <li><a th:href="@{/hello}">basic url</a></li>
+    <!--쿼리 파라미터를 넣기 위해 파람을 지정해준다.: hello?param1=data1&param2=data2-->
+    <li><a th:href="@{/hello(param1=${param1}, param2=${param2})}">hello query param</a></li>
+
+    <!--쿼리 파라미터를 넣기 위해 파람을 지정해준다.: hello/data1/data2 뒤에는 대입연산으로 생각하면 되겠다.-->
+    <li><a th:href="@{/hello/{param1}/{param2}(param1=${param1}, param2=${param2})}">path variable</a></li>
+
+    <!--대입할게 없으면 쿼리 파라미터로 만들어진다.  /hello/data1?param2=data2-->
+    <li><a th:href="@{/hello/{param1}(param1=${param1}, param2=${param2})}">path variable + query parameter</a></li>
+</ul>
+</body>
+</html>

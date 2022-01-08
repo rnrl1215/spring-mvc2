@@ -1,0 +1,6 @@
+rootProject.name = 'spring-mvc2'
+include 'thymeleaf-basic'
+include 'thymeleaf-spring-integration'
+include 'thymeleaf-spring-integration'
+include 'message-internationalization'
+
