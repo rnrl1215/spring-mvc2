@@ -3,4 +3,5 @@ include 'thymeleaf-basic'
 include 'thymeleaf-spring-integration'
 include 'thymeleaf-spring-integration'
 include 'message-internationalization'
+include 'validation'
 
