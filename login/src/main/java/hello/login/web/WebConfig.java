@@ -1,6 +1,7 @@
 package hello.login.web;
 
 import hello.login.web.filter.LogFilter;
+import hello.login.web.filter.LoginCheckFilter;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -26,4 +27,18 @@ public class WebConfig {
 
         return filterFilterRegistrationBean;
     }
+
+
+    @Bean
+    public FilterRegistrationBean loginCheckFilter() {
+        FilterRegistrationBean<Filter> filterFilterRegistrationBean = new FilterRegistrationBean<>();
+        filterFilterRegistrationBean.setFilter(new LoginCheckFilter());
+        filterFilterRegistrationBean.setOrder(2);
+
+        // 이거에 대한 성능 저하는 없다
+        // 바다의 모래알 정도이다.
+        filterFilterRegistrationBean.addUrlPatterns("/*");
+        return filterFilterRegistrationBean;
+    }
 }
+
