@@ -12,6 +12,7 @@ import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import javax.servlet.DispatcherType;
 import javax.servlet.Filter;
 import java.util.List;
 
@@ -38,7 +39,7 @@ public class WebConfig implements WebMvcConfigurer {
                 .excludePathPatterns("/", "/members/add", "/logout", "/css/**", "/*.ico", "/error");
     }
 
-    //@Bean
+    @Bean
     public FilterRegistrationBean logFilter() {
         FilterRegistrationBean<Filter> filterFilterRegistrationBean = new FilterRegistrationBean<>();
 
@@ -51,11 +52,13 @@ public class WebConfig implements WebMvcConfigurer {
         // 필터를 적용할 요청 URL
         filterFilterRegistrationBean.addUrlPatterns("/*");
 
+        filterFilterRegistrationBean.setDispatcherTypes(DispatcherType.REQUEST, DispatcherType.ERROR);
+
         return filterFilterRegistrationBean;
     }
 
 
-    @Bean
+    //@Bean
     public FilterRegistrationBean loginCheckFilter() {
         FilterRegistrationBean<Filter> filterFilterRegistrationBean = new FilterRegistrationBean<>();
         filterFilterRegistrationBean.setFilter(new LoginCheckFilter());
