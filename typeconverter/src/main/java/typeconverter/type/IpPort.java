@@ -1,4 +1,4 @@
-package com.example.typeconverter.type;
+package typeconverter.type;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

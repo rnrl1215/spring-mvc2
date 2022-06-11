@@ -1,6 +1,6 @@
-package com.example.typeconverter.conveter;
+package typeconverter.conveter;
 
-import com.example.typeconverter.type.IpPort;
+import typeconverter.type.IpPort;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.convert.converter.Converter;
 

@@ -1,4 +1,4 @@
-package com.example.typeconverter.conveter;
+package typeconverter.conveter;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.convert.converter.Converter;

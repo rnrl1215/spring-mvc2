@@ -1,6 +1,10 @@
 package com.example.typeconverter.conveter;
 
-import com.example.typeconverter.type.IpPort;
+import typeconverter.conveter.IntegerToStringConverter;
+import typeconverter.conveter.IpPortToStringConvert;
+import typeconverter.conveter.StringToIntegerConveter;
+import typeconverter.conveter.StringToIpPortConvert;
+import typeconverter.type.IpPort;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.core.convert.support.DefaultConversionService;
